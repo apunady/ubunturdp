@@ -46,12 +46,8 @@ jobs:
       # sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
 
     - name: Installing Desktop Environment (wait for 10 min)
-      run: sudo apt update && sudo apt install xfce4 && sudo chmod 777 /home/Area69Lab/ && sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
-    - name: Installing Google Chrome Headless
-      run: |
-           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-           sudo dpkg --install google-chrome-stable_current_amd64.deb
-           sudo apt install --assume-yes --fix-broken
+      run: sudo apt update && sudo apt install xfce4 && sudo chmod 777 /home/Area69Lab/  && sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
+   
     - name: Installing Some Configurations
       run: |
            sudo apt install nautilus expect nano -y
